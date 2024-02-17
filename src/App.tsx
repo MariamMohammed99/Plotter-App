@@ -1,7 +1,17 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import './App.css';
+import { useDispatch } from 'react-redux';
+import { fetchColumns, fetchData } from './actions';
 
 function App() {
+  const dispatch = useDispatch();
+  dispatch(fetchColumns());
+  dispatch(
+    fetchData({
+      measures: ['Cost'],
+      dimension: 'Product',
+    }),
+  );
   return (
     <div className='App'>
       <header className='App-header'>
@@ -18,7 +28,7 @@ function App() {
         </a>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
