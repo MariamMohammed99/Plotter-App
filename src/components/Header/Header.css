@@ -1,0 +1,21 @@
+.header {
+  background: linear-gradient(125deg, rgba(54, 0, 250, 1) 11%, rgba(40, 3, 119, 1) 99%);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0.7rem;
+  }
+
+  .header-title {
+    font-size: 1.7rem;
+  }
+}
