@@ -5,7 +5,7 @@ export interface DataPayload {
 
 export interface Column {
   name: string;
-  function: string[];
+  function: string;
 }
 
 export interface Data {
