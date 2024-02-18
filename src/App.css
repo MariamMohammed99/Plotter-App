@@ -1,16 +1,35 @@
 .App {
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+  display: flex;
+  flex-grow: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ayklam {
+ flex: 4; 
+}
+
+@media (max-width: 768px) {
+  .ayklam {
+    flex: 3.5; 
+   }
+}
+
+/* @media (min-width: 451px  max-width: 768px) {
+  .ayklam {
+    flex: 3; 
+   }
+} */
+
+@media (max-width: 450px) {
+  .ayklam {
+    flex: 1.5; 
+   }
 }
 
 .App-header {
