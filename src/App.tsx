@@ -10,8 +10,33 @@ import SelectionBar from './components/SelectionBar/SelectionBar';
 
 function App() {
   const dispatch = useDispatch();
-  const [dimensionSelected, setDimensionSelected] = useState('');
-  const [measuresSelected, setMeasuresSelected] = useState([]);
+  const [dimensionSelected, setDimensionSelected] = useState('hello');
+  const [measuresSelected, setMeasuresSelected] = useState([
+    'ayklam',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+    'habal',
+  ]);
 
   const onClearDimensionHandler = () => {
     setDimensionSelected('');
@@ -35,7 +60,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Header />
+      <Header title='Plotter' />
       <div className='screen'>
         <Sidebar columns={columns} />
         <div className='content'>
@@ -43,11 +68,13 @@ function App() {
             onClear={onClearDimensionHandler}
             label='Dimension'
             items={[dimensionSelected]}
+            type='dimension'
           />
           <SelectionBar
             onClear={onClearMeasuresHandler}
             label='Measures'
             items={measuresSelected}
+            type='measure'
           />
         </div>
       </div>

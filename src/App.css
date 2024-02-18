@@ -13,6 +13,7 @@
 .content {
   flex: 4;
   padding-top: 20px;
+  width: 100vh;
 }
 
 @media (max-width: 768px) {
