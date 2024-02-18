@@ -1,15 +1,25 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchColumns, fetchData } from './actions';
 import Header from './components/Header/Header';
 import Sidebar from './components/SideBar/SideBar';
 import { getColumns } from './selectors';
-import PrimaryButton from './components/PrimaryButton/PrimaryButton';
+import SelectionBar from './components/SelectionBar/SelectionBar';
 
 function App() {
   const dispatch = useDispatch();
+  const [dimensionSelected, setDimensionSelected] = useState('');
+  const [measuresSelected, setMeasuresSelected] = useState([]);
+
+  const onClearDimensionHandler = () => {
+    setDimensionSelected('');
+  };
+
+  const onClearMeasuresHandler = () => {
+    setMeasuresSelected([]);
+  };
 
   useEffect(() => {
     dispatch(fetchColumns());
@@ -29,7 +39,16 @@ function App() {
       <div className='screen'>
         <Sidebar columns={columns} />
         <div className='content'>
-          <PrimaryButton text='Clear' onClick={() => console.log('Clicked')} />
+          <SelectionBar
+            onClear={onClearDimensionHandler}
+            label='Dimension'
+            items={[dimensionSelected]}
+          />
+          <SelectionBar
+            onClear={onClearMeasuresHandler}
+            label='Measures'
+            items={measuresSelected}
+          />
         </div>
       </div>
     </div>

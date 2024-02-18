@@ -11,17 +11,18 @@
 }
 
 .content {
- flex: 4; 
+  flex: 4;
+  padding-top: 20px;
 }
 
 @media (max-width: 768px) {
   .content {
-    flex: 3.5; 
-   }
+    flex: 3.5;
+  }
 }
 
 @media (max-width: 450px) {
   .content {
-    flex: 1.5; 
-   }
+    flex: 1.5;
+  }
 }
