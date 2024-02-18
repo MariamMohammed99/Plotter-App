@@ -1,5 +1,5 @@
 .pill {
-  padding: 0 10px 2px 10px;
+  padding: 0 10px;
   margin-right: 10px;
   font-size: 16px;
   border-width: 1px;
@@ -8,4 +8,11 @@
   font-weight: 500;
   display: flex;
   align-items: center;
+}
+
+.pill-button {
+  border: 'none';
+  padding: 0;
+  background: 'none';
+  cursor: 'pointer';
 }

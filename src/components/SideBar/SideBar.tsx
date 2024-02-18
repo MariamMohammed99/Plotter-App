@@ -1,25 +1,11 @@
-/* eslint-disable no-console */
 import React from 'react';
-import { Draggable, Droppable, DragDropContext } from 'react-beautiful-dnd';
+import { Draggable, Droppable } from 'react-beautiful-dnd';
 import { FaCube, FaChartBar } from 'react-icons/fa';
 import { Column } from '../../types/rootState';
 import SidebarProps from './SideBarProps';
 import './SideBar.css';
 
 const Sidebar: React.FC<SidebarProps> = ({ columns }) => {
-  const onDragEnd = (result: any) => {
-    const { source, destination } = result;
-    console.log('destination', destination);
-    console.log('source', source);
-
-    // if (!destination) {
-    //   console.log('source', source);
-    //   // Item was dropped outside of a drop zone
-    //   // Perform action here
-    //   console.log('destination', destination);
-    // }
-  };
-
   const renderSection = (columnsList: Column[], type: string) => {
     return (
       <>
@@ -41,6 +27,7 @@ const Sidebar: React.FC<SidebarProps> = ({ columns }) => {
                         ref={providedDraggable.innerRef}
                         {...providedDraggable.draggableProps}
                         {...providedDraggable.dragHandleProps}
+                        data-name={column.name}
                       >
                         {column.name}
                       </li>
@@ -57,10 +44,8 @@ const Sidebar: React.FC<SidebarProps> = ({ columns }) => {
 
   return (
     <div className='sidebar-container'>
-      <DragDropContext onDragEnd={onDragEnd}>
-        {renderSection(columns, 'dimension')}
-        {renderSection(columns, 'measure')}
-      </DragDropContext>
+      {renderSection(columns, 'dimension')}
+      {renderSection(columns, 'measure')}
     </div>
   );
 };

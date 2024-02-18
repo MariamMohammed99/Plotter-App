@@ -3,4 +3,5 @@ export default interface PillProps {
   color: string;
   textColor: string;
   borderColor: string;
+  onDelete: (id: string) => void;
 }
