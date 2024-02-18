@@ -20,12 +20,10 @@
   flex: 3;
   overflow-x: auto;
   overflow-y: hidden;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
   display: flex;
 }
-
-
 
 .selection-field {
   border-radius: 6px;

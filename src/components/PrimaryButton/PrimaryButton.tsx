@@ -1,6 +1,5 @@
-// PrimaryButton.tsx
 import React from 'react';
-import { buttonBorderColor, buttonColor, buttonTextColor } from '../../constants/appConstants';
+import { buttonBorderColor, buttonColor, buttonTextColor } from '../../constants/colorConstants';
 import PrimaryButtonProps from './PrimaryButtonProps';
 import './PrimaryButton.css';
 

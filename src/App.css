@@ -16,6 +16,17 @@
   width: 100vh;
 }
 
+.chart {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-wrapper {
+  display: flex;
+  height: 60%;
+}
+
 @media (max-width: 768px) {
   .content {
     flex: 3.5;
