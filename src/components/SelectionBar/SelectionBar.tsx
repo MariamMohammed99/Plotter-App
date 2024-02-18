@@ -4,7 +4,7 @@ import { Droppable } from 'react-beautiful-dnd';
 import SelectionBarProps from './SelectionBarProps';
 import './SelectionBar.css';
 import PrimaryButton from '../PrimaryButton/PrimaryButton';
-import Pill from './components/Pill/Pill';
+import Pill from '../Pill/Pill';
 import {
   dimensionPillBorderColor,
   dimensionPillColor,
@@ -12,7 +12,7 @@ import {
   measurePillBorderColor,
   measurePillColor,
   measurePillTextColor,
-} from '../../constants/appConstants';
+} from '../../constants/colorConstants';
 
 const SelectionBar: React.FC<SelectionBarProps> = ({
   items,

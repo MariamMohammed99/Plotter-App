@@ -9,7 +9,7 @@ const Pill: React.FC<PillProps> = ({ text, color, textColor, borderColor, onDele
     borderColor,
   };
 
-  const onDeleteHandler = () => onDelete(text); // Pass the text as an argument to onDelete
+  const onDeleteHandler = () => onDelete(text);
 
   if (text.trim() === '') return null;
   return (
