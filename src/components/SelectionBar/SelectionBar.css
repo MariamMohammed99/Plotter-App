@@ -1,0 +1,42 @@
+.selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 0.7rem;
+  margin-bottom: 30px;
+}
+
+.selection h3 {
+  margin: 0;
+  font-weight: normal;
+  flex: 1;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.selection-field-scroll {
+  flex: 3;
+  overflow-x: auto;
+  overflow-y: hidden;
+justify-content: center;
+align-items: center;
+  display: flex;
+}
+
+
+
+.selection-field {
+  border-radius: 6px;
+  height: 30px;
+  border: 2px solid #e4e4e4;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+}
+
+.selection-button {
+  flex: 1;
+}
