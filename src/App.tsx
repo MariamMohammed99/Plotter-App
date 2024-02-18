@@ -6,6 +6,7 @@ import { fetchColumns, fetchData } from './actions';
 import Header from './components/Header/Header';
 import Sidebar from './components/SideBar/SideBar';
 import { getColumns } from './selectors';
+import PrimaryButton from './components/PrimaryButton/PrimaryButton';
 
 function App() {
   const dispatch = useDispatch();
@@ -25,9 +26,11 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <div className='content'>
+      <div className='screen'>
         <Sidebar columns={columns} />
-        <div className='ayklam'>Hellooo</div>
+        <div className='content'>
+          <PrimaryButton text='Clear' onClick={() => console.log('Clicked')} />
+        </div>
       </div>
     </div>
   );
