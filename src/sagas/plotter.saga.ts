@@ -5,7 +5,7 @@ import { fetchColumnsApi, fetchDataApi } from '../services';
 import { baseUrl, columnsUrl, dataUrl } from '../constants/appConstants';
 import { setColumns, setData } from '../actions';
 
-function* fetchColumns(): unknown {
+export function* fetchColumns(): unknown {
   try {
     const responseData: any = yield call(fetchColumnsApi, baseUrl + columnsUrl);
     yield put(setColumns(responseData.columns));
@@ -15,7 +15,7 @@ function* fetchColumns(): unknown {
   }
 }
 
-function* fetchData(dataPayload: { type: string; payload: DataPayload }): unknown {
+export function* fetchData(dataPayload: { type: string; payload: DataPayload }): unknown {
   try {
     const responseData: any = yield call(fetchDataApi, {
       url: baseUrl + dataUrl,

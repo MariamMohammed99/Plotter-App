@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-catch */
 import axios from 'axios';
 import { DataPayload } from '../types/rootState';
 
@@ -6,7 +7,7 @@ export const fetchColumnsApi = async (url: string): Promise<unknown> => {
     const response = await axios.get(url);
     return response.data;
   } catch (error) {
-    throw new Error(error as string);
+    throw error;
   }
 };
 
@@ -25,6 +26,6 @@ export const fetchDataApi = async ({
     });
     return response.data;
   } catch (error) {
-    throw new Error(error as string);
+    throw error;
   }
 };
