@@ -5,53 +5,23 @@
   flex-direction: column;
 }
 
-.content {
+.screen {
   display: flex;
   flex-grow: 1;
 }
 
-.ayklam {
+.content {
  flex: 4; 
 }
 
 @media (max-width: 768px) {
-  .ayklam {
+  .content {
     flex: 3.5; 
    }
 }
 
-/* @media (min-width: 451px  max-width: 768px) {
-  .ayklam {
-    flex: 3; 
-   }
-} */
-
 @media (max-width: 450px) {
-  .ayklam {
+  .content {
     flex: 1.5; 
    }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
